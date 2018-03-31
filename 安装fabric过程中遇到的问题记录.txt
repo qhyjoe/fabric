@@ -4,7 +4,7 @@
 	2、https://blog.csdn.net/oliverlyn/article/details/78443686 （来源于区块链-原理、设计与应用）
 二、git clone 太慢解决方法
 	1、C:\Windows\System32\drivers\etc\hosts 结尾添加192.30.253.113  github.com
-	2、我的是虚拟机，clone还是很慢，最终我是把windows上的代码copy到了虚拟机
+	2、虚拟机  /etc/hosts 结尾追加192.30.253.113  github.com
 三、安装调试中的问题
 	1、在安装过程中，总会出现各种各样的问题，./network_setup.sh up 启动过程中直接报错（找不到文件夹之类的错误）等，检查go version，docker-compose version等环境是否正常；
-	2、代码从windows中copy到相应的目录下（/go/src/github.com/hyperledger/），先进入/go/src/github.com/hyperledger/fabric/examples/e2e_cli目录执行source download-dockerimages.sh -c x86_64-1.0.0 -f x86_64-1.0.0命令下载docker images，然后到/go/src/github.com/hyperledger/fabric/目录下执行git checkout v1.0.0，如果报错（error: Your local changes to the following files would be overwritten by checkout:）可以先git pull，在执行
+	2、代码clone到（/go/src/github.com/hyperledger/），先进入/go/src/github.com/hyperledger/fabric/examples/e2e_cli目录执行source download-dockerimages.sh -c x86_64-1.0.0 -f x86_64-1.0.0命令下载docker images，然后到/go/src/github.com/hyperledger/fabric/目录下执行git checkout v1.0.0，如果报错（error: Your local changes to the following files would be overwritten by checkout:）可以先git pull，在执行
